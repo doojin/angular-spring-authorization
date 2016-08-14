@@ -1,0 +1,14 @@
+.asauthMenu {
+    display: block !important;
+    text-align: center;
+
+    &__item {
+        display: inline-block;
+        float: none !important;
+
+        &__button {
+            margin-left: 40px;
+            top: 0 !important;
+        }
+    }
+}
