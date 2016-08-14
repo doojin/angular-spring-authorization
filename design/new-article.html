@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="app.css"/>
+    <title>New Article</title>
+</head>
+<body>
+    <nav class="top-bar">
+        <section class="top-bar-section">
+            <ul class="asauthMenu">
+                <li class="asauthMenu__item"><a href="#">Article List</a></li>
+                <li class="asauthMenu__item"><a href="#">User List</a></li>
+                <li class="asauthMenu__item"><a class="small radius button asauthMenu__item__button">Log in</a></li>
+            </ul>
+        </section>
+    </nav>
+
+    <div class="row">
+        <div class="small-12 columns">
+
+            <div class="panel">
+
+                <div class="row">
+                    <div class="small-2 columns">
+                        <label for="articleTitle" class="right inline">Article Title</label>
+                    </div>
+                    <div class="small-9 columns end">
+                        <input type="text" id="articleTitle" placeholder="Article Title">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="small-2 columns">
+                        <label for="articleBody" class="right inline">Article Body</label>
+                    </div>
+                    <div class="small-9 columns end">
+                        <textarea id="articleBody" class="asauthArticleForm__body" placeholder="Article Body"></textarea>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="small-9 small-offset-2 columns end text-center">
+                        <button class="small radius button">Create</button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
