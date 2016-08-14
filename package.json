@@ -17,7 +17,8 @@
   },
   "homepage": "https://github.com/doojin/angular-spring-authorization#readme",
   "dependencies": {
-    "foundation": "^4.2.1-1"
+    "angular": "^1.5.8",
+    "zurb-foundation-5": "^5.4.7"
   },
   "devDependencies": {
     "css-loader": "^0.23.1",
