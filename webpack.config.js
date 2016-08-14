@@ -14,6 +14,10 @@ module.exports = {
             {
                 'test': /front-end\/styles\/app.scss$/,
                 'loader': extractDesignSASS.extract(['css', 'sass'])
+            },
+            {
+                'test': /\.(eot|woff|woff2|ttf|svg|png|jpe?g|gif)(\?\S*)?$/,
+                'loader': 'url'
             }
         ]
     },
