@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html ng-app>
 <head>
     <title>Hello, world!</title>
+    <script src="/static/js/app.js"></script>
 </head>
 <body>
-    Hello, world!
+    <input ng-model="name">
+    Hello, {{name}} !
 </body>
 </html>

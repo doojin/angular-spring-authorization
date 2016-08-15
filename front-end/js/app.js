@@ -1,0 +1,1 @@
+import angular from '../../node_modules/angular/angular.min';
