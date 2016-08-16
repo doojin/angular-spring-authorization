@@ -5,11 +5,14 @@ import config from './config';
 
 import ArticleListController from './controllers/article-list';
 import UserListController from './controllers/user-list';
+import userRepository from './repositories/user';
+import articleRepository from './repositories/article';
 
 let app = angular.module('angularSpringAuthorization', ['ui.router']);
 
 app.config(['$stateProvider', '$urlMatcherFactoryProvider', config]);
-app.controller('ArticleListController', ['$scope', ArticleListController]);
-app.controller('UserListController', ['$scope', UserListController]);
-
+app.controller('ArticleListController', ['$scope', 'articleRepository', ArticleListController]);
+app.controller('UserListController', ['$scope', 'userRepository', UserListController]);
+app.factory('userRepository',['$http', '$q', userRepository]);
+app.factory('articleRepository',['$http', '$q', articleRepository]);
 app.run(['$state', '$stateParams', function($state, $stateParams) {}]);
