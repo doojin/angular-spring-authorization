@@ -1,5 +1,7 @@
 .idea/
 node_modules/
 
+app.iml
+
 design/app.css
 src/main/webapp/static/
