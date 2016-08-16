@@ -1,3 +1,3 @@
 INSERT INTO ROLE VALUES
-  (1, 'PUBLISHER'),
-  (2, 'ADMIN');
+  (0, 'PUBLISHER'),
+  (1, 'ADMIN');

@@ -1,2 +1,2 @@
 INSERT INTO USER VALUES
-  (1, 'dmitry.papka@gmail.com', 2);
+  (0, 'dmitry.papka@gmail.com', 1);

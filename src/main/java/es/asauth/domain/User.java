@@ -1,8 +1,26 @@
 package es.asauth.domain;
 
+import javax.persistence.*;
+
+@Entity
 public class User {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long id;
+
     private String account;
+
+    @Column(name = "ROLE_ID")
+    @Enumerated(EnumType.ORDINAL)
     private Role role;
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
 
     public String getAccount() {
         return account;
