@@ -1,19 +1,11 @@
-package es.asauth.domain;
+package es.asauth.dto;
 
-import javax.persistence.*;
-import java.util.Date;
-
-@Entity
-public class Article {
-    @Id
+public class ArticleDTO {
     private long id;
     private String title;
     private String text;
-    @ManyToOne
-    @JoinColumn(name = "AUTHOR_ID")
-    private User author;
-    @Column(name = "CREATION_DATE")
-    private Date date;
+    private String author;
+    private long timestamp;
 
     public long getId() {
         return id;
@@ -39,19 +31,19 @@ public class Article {
         this.text = text;
     }
 
-    public User getAuthor() {
+    public String getAuthor() {
         return author;
     }
 
-    public void setAuthor(User author) {
+    public void setAuthor(String author) {
         this.author = author;
     }
 
-    public Date getDate() {
-        return date;
+    public long getTimestamp() {
+        return timestamp;
     }
 
-    public void setDate(Date date) {
-        this.date = date;
+    public void setTimestamp(long timestamp) {
+        this.timestamp = timestamp;
     }
 }

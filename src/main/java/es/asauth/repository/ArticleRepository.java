@@ -1,36 +1,26 @@
 package es.asauth.repository;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import es.asauth.domain.Article;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.io.Resource;
-import org.springframework.core.io.ResourceLoader;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
-import javax.annotation.PostConstruct;
-import java.io.IOException;
-import java.util.ArrayList;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 import java.util.List;
 
 @Repository
 public class ArticleRepository {
 
-    @Autowired
-    private ResourceLoader resourceLoader;
+    @PersistenceContext
+    private EntityManager entityManager;
 
-    private List<Article> articles = new ArrayList<>();
-
-    @PostConstruct
-    protected void init() throws IOException {
-        Resource usersResource = resourceLoader.getResource("resources/articles.json");
-        ObjectMapper mapper = new ObjectMapper();
-        articles = mapper.readValue(
-                usersResource.getInputStream(),
-                mapper.getTypeFactory().constructCollectionType(List.class, Article.class)
-        );
+    @SuppressWarnings("unchecked")
+    public List<Article> findAll() {
+        return entityManager.createQuery("SELECT a FROM Article a").getResultList();
     }
 
-    public List<Article> findAll() {
-        return articles;
+    @Transactional
+    public void save(Article article) {
+        entityManager.persist(article);
     }
 }
