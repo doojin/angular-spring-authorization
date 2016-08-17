@@ -4,4 +4,5 @@ node_modules/
 app.iml
 
 design/app.css
-src/main/webapp/static/
+src/main/webapp/static/css
+src/main/webapp/static/js
