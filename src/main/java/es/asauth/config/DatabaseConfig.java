@@ -1,7 +1,6 @@
 package es.asauth.config;
 
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseBuilder;
 import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType;
 import org.springframework.orm.jpa.JpaTransactionManager;
@@ -13,7 +12,6 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;
 
-@Configuration
 @EnableTransactionManagement
 public class DatabaseConfig {
     private static final String SCRIPT_PATH_DB_CREATE = "file:src/main/webapp/resources/db/create-db.sql";
