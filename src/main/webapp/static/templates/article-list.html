@@ -1,0 +1,13 @@
+<a ui-sref="new-article" class="small radius button">Create Article</a>
+
+<div class="panel" ng-repeat="article in articles">
+    <h5>{{article.title}}</h5>
+    <p class="text-justify">
+        {{article.text}}
+    </p>
+    <div class="right">
+        <span class="radius label">{{article.author}}</span>
+        <span class="radius secondary label">{{article.date}}</span>
+    </div>
+    <a class="small radius button">Read More</a>
+</div>

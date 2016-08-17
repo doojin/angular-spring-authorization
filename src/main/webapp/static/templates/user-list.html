@@ -1,0 +1,20 @@
+<a ui-sref="new-user" class="small radius button">Create User</a>
+
+<div class="panel">
+    <table cellspacing="0" cellpadding="0" class="asauthUserList">
+        <thead>
+        <tr>
+            <th>GMail Account</th>
+            <th>Assigned Role</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="user in users">
+            <td>{{user.account}}</td>
+            <td>{{user.role}}</td>
+            <td><a href="#" class="fa fa-remove" aria-hidden="true"></a></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
